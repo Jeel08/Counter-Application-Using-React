@@ -63,7 +63,7 @@ const Counter = () => {
         setAray(newArray);
     }
 
-    const Style = {height:"2rem",width:"2rem"}
+    const Style = {height:"2rem",width:"2rem",cursor:"pointer"}
     return (
         <>
             <div>
@@ -77,25 +77,20 @@ const Counter = () => {
                     return (
                         <>
                         <div style={{display:"flex",gap:"1rem"}}>
-                         
+                            <p className="btn btn-primary" style={{width: "4rem"}}>{ar.count == 0 ? "Zero" : ar.count}</p>
 
-                            <p className="btn btn-primary">{ar.count == 0 ? "Zero" : ar.count}</p>
+                            <div style={{display:"flex"}}>
+                                <div>
+                                    <img src={Plus} style={Style} onClick={()=>handleIncrement(ar.id)}/>
+                                </div>
 
-                            <div>
-                                <img
-                                src={Plus}
-                                style={Style}
-                                onClick={()=>handleIncrement(ar.id)}
-                                />
+                                <div>
+                                    <img src={Minus} alt="Minus" style={Style} onClick={()=>handleDecrement(ar.id)}/>
+                                </div>
+                                <div>
+                                    <img src={Delete} alt="Delete" onClick={()=>handleDelete(ar.id)} style={Style}/>
+                                </div>
 
-                                <img src={Minus} alt="Minus" 
-                                style={Style}
-                                onClick={()=>handleDecrement(ar.id)}
-                                />
-
-                                <img src={Delete} alt="Delete" 
-                                onClick={()=>handleDelete(ar.id)}
-                                style={Style}/>
                             </div>
                         </div>
                         </>
