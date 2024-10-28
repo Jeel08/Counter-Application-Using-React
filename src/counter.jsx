@@ -3,7 +3,6 @@ import Items from "./items";
 import Plus from "./images/plus.png";
 import Minus from "./images/delete.png";
 import Delete from "./images/icon (2).png";
-import Button from 'react-bootstrap/Button';
 
 const Counter = () => {
     const [origAray,setOrigArray] = useState([
