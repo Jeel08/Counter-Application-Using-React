@@ -1,9 +1,5 @@
 import './App.css';
 import Counter from './counter';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-// or less ideally
-// import { Button } from 'react-bootstrap';
 <>
 <link
     rel="stylesheet"
